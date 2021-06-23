@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"; // imr
+//Components
+import Topbar from "./components/Topbar";
+import PlacesGrid from "./components/PlacesGrid";
+import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
+  // sfc
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Topbar username="Sachin" flag={true} data={[]} />
+      <PlacesGrid />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
