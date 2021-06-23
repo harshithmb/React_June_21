@@ -7,11 +7,11 @@ import Footer from "./components/Footer";
 const App = () => {
   // sfc
   return (
-    <div>
-      <Topbar username="Sachin" flag={true} data={[]} />
+    <>
+      {/* <Topbar username="Sachin" flag={true} data={[]} /> */}
       <PlacesGrid />
       <Footer />
-    </div>
+    </>
   );
 };
 

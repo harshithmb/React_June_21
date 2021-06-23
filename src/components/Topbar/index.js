@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import { convertToUpper as toUpper, mockData } from "../../utils/constants";
 import styles from "./Topbar.module.css";
 
@@ -159,7 +159,7 @@ class Child extends Component {
 
 // export default TopBar;
 
-class Parent_1 extends Component {
+class Parent_1 extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -171,10 +171,24 @@ class Parent_1 extends Component {
   //componentDidUpdate //  3rd Call Update Phase
 
   //shouldComponentUpdate 1st call Update Phase
+
+  // 5 +
+  // 0 -
+  shouldComponentUpdate(nextProps, nextState) {}
+  handleCount() {
+    return [];
+  }
   render() {
     // 2nd Call Update
     return (
       <div>
+        {this.state.count}
+        <button>-</button>
+        <button>+</button>
+        <input
+          onChange={(e) => this.setState({ searchValue: e.target.value })}
+        />
+        <button onClick={() => {}}>Submit</button>
         <Navbar cartProp={this.state.cart} />
         <Products
           products={this.state.products}
