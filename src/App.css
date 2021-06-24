@@ -1,14 +1,22 @@
-.price{
+.price {
   background-color: blue;
 }
 
-.products{
+.products {
   display: flex;
   flex-wrap: wrap;
 }
 
-.product{
+.product {
   border: 1px solid;
   border-radius: 10px;
   margin: 20px;
+}
+
+.card-para {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

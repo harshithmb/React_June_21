@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import ErrorBoundary from "../ErrorBoundary";
+import "../../App.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -38,7 +38,7 @@ const Products = () => {
             <img class="card-img-top" src={preview} alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">{name}</h5>
-              <p class="card-text">{description}</p>
+              <p class="card-text card-para">{description}</p>
               <a href="#" class="btn btn-primary">
                 Go somewhere
               </a>
