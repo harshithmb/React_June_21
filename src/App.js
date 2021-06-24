@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       {/* <Topbar username="Sachin" flag={true} data={[]} /> */}
-      <PlacesGrid />
+      {/* <PlacesGrid /> */}
       <Footer />
     </>
   );
