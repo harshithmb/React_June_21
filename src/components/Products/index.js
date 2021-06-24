@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../../App.css";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -33,14 +34,16 @@ const Products = () => {
       {products.length &&
         products.map(({ name, preview, id, description }) => (
           <div class="card m-2" style={{ width: "18rem" }} key={id}>
-            <img class="card-img-top" src={preview} alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">{name}</h5>
-              <p class="card-text card-para">{description}</p>
-              <a href="#" class="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
+            <Link to={`/products/${id}`}>
+              <img class="card-img-top" src={preview} alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">{name}</h5>
+                <p class="card-text card-para">{description}</p>
+                <a href="#" class="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </Link>
           </div>
         ))}
     </div>

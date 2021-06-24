@@ -42,6 +42,11 @@ const Topbar = () => {
             </a>
             {/* </Link> */}
           </li>
+          <li className="nav-item">
+            <Link to="/products" className="nav-link">
+              Products
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
