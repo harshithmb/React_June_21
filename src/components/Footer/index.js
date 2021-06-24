@@ -20,7 +20,17 @@ const Products = () => {
     };
   }, []); // componentWillUnmount
 
-  return <>{products.length && products.map(({ name }) => <h1>{name}</h1>)}</>;
+  return (
+    <>
+      {products.length &&
+        products.map(({ name, preview }) => (
+          <>
+            <img src={preview} width="200" />
+            <h1>{name}</h1>
+          </>
+        ))}
+    </>
+  );
 };
 
 export default Products;
