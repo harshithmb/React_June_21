@@ -31,29 +31,21 @@ const Products = () => {
   }, []); // componentWillUnmount
 
   return (
-    <>
-      {showChild ? (
-        <ErrorBoundary>
-          <Child count={count} name={name} />
-        </ErrorBoundary>
-      ) : (
-        ""
-      )}
-      <button onClick={() => updateCount(count + 1)}>+</button>
-      <button onClick={() => setName("Akash")}>Change Name</button>
-      <button onClick={() => setShowChild(!showChild)}>SHOW/HIDE</button>
-      <hr />
+    <div className={"d-flex flex-wrap justify-content-center"}>
       {products.length &&
-        products.map((item) => (
-          <>
-            <img src={item.preview} width="200" />
-            <h1>{item.name}</h1>
-            <button onClick={() => setCart([...cart, item])}>
-              Add TO Cart
-            </button>
-          </>
+        products.map(({ name, preview, id, description }) => (
+          <div class="card m-2" style={{ width: "18rem" }} key={id}>
+            <img class="card-img-top" src={preview} alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{name}</h5>
+              <p class="card-text">{description}</p>
+              <a href="#" class="btn btn-primary">
+                Go somewhere
+              </a>
+            </div>
+          </div>
         ))}
-    </>
+    </div>
   );
 };
 
