@@ -3,13 +3,14 @@ import React from "react"; // imr
 import Topbar from "./components/Topbar";
 import PlacesGrid from "./components/PlacesGrid";
 import Footer from "./components/Footer";
+import Products from "./components/Products";
 
 const App = () => {
   // sfc
   return (
     <>
       {/* <Topbar username="Sachin" flag={true} data={[]} /> */}
-      {/* <PlacesGrid /> */}
+      <Products />
       <Footer />
     </>
   );
