@@ -12,9 +12,7 @@ const Products = () => {
   useEffect(() => {
     axios("https://5d76bf96515d1a0014085cf9.mockapi.io/product")
       .then((res) => {
-        setTimeout(() => {
-          setProducts(res.data);
-        }, 5000);
+        setProducts(res.data);
       })
       .catch((err) => alert(err));
     console.log("componentDidmount");
