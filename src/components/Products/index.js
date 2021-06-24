@@ -34,7 +34,14 @@ const Products = () => {
       {products.length &&
         products.map(({ name, preview, id, description }) => (
           <div class="card m-2" style={{ width: "18rem" }} key={id}>
-            <Link to={`/products/${id}`}>
+            <Link
+              to={{
+                pathname: `/products/${id}`,
+                preview,
+                name,
+                descriptionName: description, // use props.location
+              }}
+            >
               <img class="card-img-top" src={preview} alt="Card image cap" />
               <div class="card-body">
                 <h5 class="card-title">{name}</h5>

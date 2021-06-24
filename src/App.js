@@ -14,6 +14,7 @@ import PDP from "./components/PDP";
 
 const App = () => {
   // sfc
+  const path = "react";
   return (
     <BrowserRouter>
       <Topbar />
