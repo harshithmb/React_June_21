@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 
-const Footer = () => {
-  const [name, updateName] = useState("Sachin");
-  const [age, setAge] = useState(123);
-  return (
-    <>
-      <h1>
-        {name} - {age}
-      </h1>
-      <button onClick={() => updateName("Aakash")}>Click</button>
-      <button onClick={() => setAge(22)}>Update Age</button>
-      <hr />
-      <Child name={name} />
-    </>
-  );
+const Products = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios("https://5d76bf96515d1a0014085cf9.mockapi.io/product")
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => alert(err));
+  }, []); //componentDidmount
+
+  useEffect(() => {}); //componentDidmount and DidUpdate
+
+  useEffect(() => {
+    return () => {
+      //clean Up Code
+    };
+  }, []); // componentWillUnmount
+
+  return <>{products.length && products.map(({ name }) => <h1>{name}</h1>)}</>;
 };
 
-export default Footer;
-
-const Child = (props) => {
-  return <h1>{props.name}</h1>;
-};
+export default Products;
