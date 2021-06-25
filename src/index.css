@@ -10,6 +10,12 @@ code {
 }
 
 a {
-  color: initial;
+  color: initial !important;
   text-decoration: none !important;
+}
+
+.navbar-dark .navbar-brand,
+.nav-link,
+.btn {
+  color: #fff !important;
 }

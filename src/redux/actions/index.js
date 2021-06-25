@@ -4,3 +4,10 @@ export const getProducts = (payload) => {
     payload,
   };
 };
+
+export const addProduct = (payload) => {
+  return {
+    type: "ADD_PRODUCT",
+    payload,
+  };
+};

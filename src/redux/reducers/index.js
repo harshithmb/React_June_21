@@ -1,17 +1,44 @@
+import * as actionTypes from "../actionTypes";
+
 const initialState = {
-  userDetails: [],
   products: [{ name: "Sachin", age: 123 }],
   cart: [],
 };
 
-const Reducers = (state = initialState, action) => {
-  switch (action.type) {
-    case "GET_PRODUCTS":
-      debugger;
-      return { ...state, products: action.payload };
+export const productReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case actionTypes.GET_PRODUCTS:
+      return { ...state, products: payload };
+    case actionTypes.ADD_PRODUCT: {
+      const productId = payload.id;
+      const { cart } = state;
+      let updateProducts = [];
+      const index = cart.findIndex((item) => item.id === productId);
+      if (index !== -1) {
+        cart[index].quantity = cart[index].quantity + 1;
+        updateProducts = cart;
+      } else {
+        updateProducts = [...cart, { ...payload, quantity: 1 }];
+      }
+      return { ...state, cart: updateProducts };
+    }
     default:
       return state;
   }
 };
 
-export default Reducers;
+const initailUser = {
+  userDetails: {},
+  userName: "Jayanth",
+  login: false,
+  status: true,
+};
+
+export const userReducer = (state = initailUser, { type, payload }) => {
+  switch (type) {
+    case actionTypes.USER_DETAILS:
+      return { ...state, products: payload };
+    default:
+      return state;
+  }
+};

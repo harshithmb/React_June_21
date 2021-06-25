@@ -30,7 +30,7 @@ class SignUp extends Component {
 }
 
 const mapStateToProps = (store) => ({
-  prods: store.products,
+  prods: store.prodReducer.products,
 });
 
 export default connect(mapStateToProps, null)(SignUp);
