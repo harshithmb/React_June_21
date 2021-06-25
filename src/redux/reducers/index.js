@@ -3,6 +3,7 @@ import * as actionTypes from "../actionTypes";
 const initialState = {
   products: [{ name: "Sachin", age: 123 }],
   cart: [],
+  redirectHome: false,
 };
 
 export const productReducer = (state = initialState, { type, payload }) => {
@@ -22,6 +23,8 @@ export const productReducer = (state = initialState, { type, payload }) => {
       }
       return { ...state, cart: updateProducts };
     }
+    case actionTypes.CLEAR_CART:
+      return { ...state, cart: [], redirectHome: true };
     default:
       return state;
   }

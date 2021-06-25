@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
+import { clearCart } from "../../redux/actions";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, clearCartProducts, redirectHome }) => {
   const getTotal = () => {
     return cart.reduce(
       (acc, item) => acc + Number(item.price) * Number(item.quantity),
       0
     );
   };
+
+  const placeOrder = () => {
+    //call API
+    clearCartProducts();
+  };
   return (
-    <>
+    <div className="m-4">
+      {redirectHome && <Redirect to="/" />}
       <h1>Cart</h1>
       {cart.length &&
         cart.map(({ name, quantity, price }) => (
@@ -24,12 +32,20 @@ const Cart = ({ cart }) => {
         ))}
 
       <h1>Total = {getTotal()}</h1>
-    </>
+      <button className={"btn btn-success"} onClick={placeOrder}>
+        Place Order
+      </button>
+    </div>
   );
 };
 
 const mapStateToProps = (store) => ({
   cart: store.prodReducer.cart,
+  redirectHome: store.prodReducer.redirectHome,
 });
 
-export default connect(mapStateToProps, null)(Cart);
+const mapDispatchToProps = (dispatch) => ({
+  clearCartProducts: () => dispatch(clearCart()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
