@@ -6,7 +6,10 @@ const rootReducer = combineReducers({
   userReducer,
   prodReducer: productReducer,
 });
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // Redux Dev Tools
+);
 
 export default store;
 

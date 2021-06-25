@@ -32,7 +32,7 @@ export const productReducer = (state = initialState, { type, payload }) => {
 
 const initailUser = {
   userDetails: {},
-  userName: "Jayanth",
+  userName: "All",
   login: false,
   status: true,
 };
