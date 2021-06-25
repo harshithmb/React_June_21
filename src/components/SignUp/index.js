@@ -1,5 +1,5 @@
 import React, { Component, createRef } from "react";
-
+import { connect } from "react-redux";
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -13,10 +13,8 @@ class SignUp extends Component {
     console.log(this.firstName.current.value, this.firstName);
   };
 
-  componentDidUpdate() {
-    console.log("Hello Change");
-  }
   render() {
+    console.log("this.props.prods", this.props.prods);
     return (
       <form onSubmit={this.handleSubmit}>
         <label>First Name</label>
@@ -31,4 +29,8 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+const mapStateToProps = (store) => ({
+  prods: store.products,
+});
+
+export default connect(mapStateToProps, null)(SignUp);
