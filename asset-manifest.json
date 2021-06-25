@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/React_June_21/static/css/main.4f51c4f8.chunk.css",
-    "main.js": "/React_June_21/static/js/main.fe0d687d.chunk.js",
-    "main.js.map": "/React_June_21/static/js/main.fe0d687d.chunk.js.map",
-    "runtime-main.js": "/React_June_21/static/js/runtime-main.290ed5da.js",
-    "runtime-main.js.map": "/React_June_21/static/js/runtime-main.290ed5da.js.map",
+    "main.css": "/React_June_21/static/css/main.02bf0e00.chunk.css",
+    "main.js": "/React_June_21/static/js/main.d2e2c62b.chunk.js",
+    "main.js.map": "/React_June_21/static/js/main.d2e2c62b.chunk.js.map",
+    "runtime-main.js": "/React_June_21/static/js/runtime-main.a3389db5.js",
+    "runtime-main.js.map": "/React_June_21/static/js/runtime-main.a3389db5.js.map",
     "static/css/2.d45d6843.chunk.css": "/React_June_21/static/css/2.d45d6843.chunk.css",
-    "static/js/2.a22edc8d.chunk.js": "/React_June_21/static/js/2.a22edc8d.chunk.js",
-    "static/js/2.a22edc8d.chunk.js.map": "/React_June_21/static/js/2.a22edc8d.chunk.js.map",
-    "static/js/3.25fa1430.chunk.js": "/React_June_21/static/js/3.25fa1430.chunk.js",
-    "static/js/3.25fa1430.chunk.js.map": "/React_June_21/static/js/3.25fa1430.chunk.js.map",
+    "static/js/2.39a6b4fe.chunk.js": "/React_June_21/static/js/2.39a6b4fe.chunk.js",
+    "static/js/2.39a6b4fe.chunk.js.map": "/React_June_21/static/js/2.39a6b4fe.chunk.js.map",
+    "static/js/3.17a3e4ba.chunk.js": "/React_June_21/static/js/3.17a3e4ba.chunk.js",
+    "static/js/3.17a3e4ba.chunk.js.map": "/React_June_21/static/js/3.17a3e4ba.chunk.js.map",
     "index.html": "/React_June_21/index.html",
     "static/css/2.d45d6843.chunk.css.map": "/React_June_21/static/css/2.d45d6843.chunk.css.map",
-    "static/css/main.4f51c4f8.chunk.css.map": "/React_June_21/static/css/main.4f51c4f8.chunk.css.map",
-    "static/js/2.a22edc8d.chunk.js.LICENSE.txt": "/React_June_21/static/js/2.a22edc8d.chunk.js.LICENSE.txt"
+    "static/css/main.02bf0e00.chunk.css.map": "/React_June_21/static/css/main.02bf0e00.chunk.css.map",
+    "static/js/2.39a6b4fe.chunk.js.LICENSE.txt": "/React_June_21/static/js/2.39a6b4fe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.290ed5da.js",
+    "static/js/runtime-main.a3389db5.js",
     "static/css/2.d45d6843.chunk.css",
-    "static/js/2.a22edc8d.chunk.js",
-    "static/css/main.4f51c4f8.chunk.css",
-    "static/js/main.fe0d687d.chunk.js"
+    "static/js/2.39a6b4fe.chunk.js",
+    "static/css/main.02bf0e00.chunk.css",
+    "static/js/main.d2e2c62b.chunk.js"
   ]
 }
