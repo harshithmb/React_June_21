@@ -18,6 +18,7 @@ const App = () => {
   // sfc
   const path = "react";
   return (
+    // <h1>Something else</h1>
     <BrowserRouter>
       <Topbar />
       <Switch>
