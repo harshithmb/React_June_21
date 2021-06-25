@@ -24,23 +24,37 @@ const SignIn = () => {
     <>
       {navigateUser && <Redirect to="/products" />}
       <h1>Sign In</h1>
-      <form onSubmit={handleSubmit}>
-        <label>User Name</label>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setusername(e.target.value.toUpperCase())}
-        />
-        <label>Password</label>
-        <input
-          type="text"
-          value={password}
-          onChange={(e) => setpassword(e.target.value)}
-        />
-        <input type="submit" />
+
+      <form onSubmit={handleSubmit} className={"m-4"}>
+        <div class="form-group m-4">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            onChange={(e) => setusername(e.target.value.toUpperCase())}
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <small id="emailHelp" class="form-text text-muted">
+            We'll never share your email with anyone else.
+          </small>
+        </div>
+        <div className="form-group m-4">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            onChange={(e) => setpassword(e.target.value)}
+            className="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" className="btn btn-primary m-4">
+          Submit
+        </button>
       </form>
       <hr />
-      <Child />
     </>
   );
 };
